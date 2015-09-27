@@ -1,0 +1,33 @@
+{
+  "name": "slide",
+  "version": "1.0.0",
+  "description": "for test",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huajs/huaDialog.git"
+  },
+  "keywords": [
+    "d"
+  ],
+  "author": "puhuasheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huajs/huaDialog/issues"
+  },
+  "homepage": "https://github.com/huajs/huaDialog#readme",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "dependencies":{
+    "grunt-cli":"*",
+    "grunt":"*",
+    "grunt-autoprefixer":"*",
+    "grunt-contrib-watch":"*",
+    "grunt-yui-compressor":"*",
+    "load-grunt-tasks":"*",
+    "grunt-contrib-less":"*"
+  }
+}
