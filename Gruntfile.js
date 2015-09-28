@@ -17,7 +17,7 @@ module.exports = function (grunt) {
                     "banner": '<%= banner %>'
                 },
                 files: {
-                    "dest/<%= pkg.name %>.css": "css/<%= pkg.name %>.less"
+                    "css/<%= pkg.name %>.css": "css/<%= pkg.name %>.less"
                 }
             }
         },

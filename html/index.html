@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>幻灯片</title>
+    <link href="../css/slide.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="../js/require/require.min.js"></script>
 
 </head>
 <body>
+<div class="slide-wrap" data-slide="wrap">
+    <div class="slide-center">
+        <a class="slide-big-img" data-slide="big-img"></a>
+        <a class="slide-big-left"></a>
+        <a class="slide-big-right"></a>
+    </div>
+    <div class="slide-detail-block">
+        <span class="slide-title f-left">标题</span>
+        <span class="slide-colect f-right padding-lr-10">收藏()</span>
+        <span class="slide-transmit f-right padding-lr-10">转发()</span>
+        <span class="slide-zan f-right padding-lr-10">点赞()</span>
+        <span class="slide-comment f-right padding-lr-10">评论()</span>
+    </div>
+    <div class="slide-tiny">
+    <ul class="slide-tiny-ul" data-slide="tiny-ul">
+        <!--<li class="slide-tiny-item"><img src="../images/125600649.jpg"/></li>-->
+    </ul>
+    </div>
+</div>
+<script>
+    require.config({
+        baseUrl: '../js',
+        paths: {
+            'jquery': 'jquery/jquery-1.11.3'
+        },
+        shim: {
+            'slide': ['jquery']
+        }
+    });
 
+    require(['jquery', 'slide'], function ($, slide) {
+        var source = [
+            {
+                url: '../images/125603197.jpg',
+                tinyUrl: '../images/125600649.jpg',
+                href: 'http://www.baidu.com',
+                title: '',
+                collect: 4,
+                zan: 4,
+                transmit: 3,
+                comment: 5
+            },
+            {
+                url: '../images/125685867.jpg',
+                tinyUrl: '../images/125668510.jpg',
+                href: 'http://www.baidu.com',
+                title: '',
+                collect: 4,
+                zan: 4,
+                transmit: 3,
+                comment: 5
+            }
+
+        ];
+        slide = new slide(source);
+        slide.init();
+    });
+
+</script>
 </body>
 </html>
